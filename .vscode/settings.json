@@ -1,0 +1,57 @@
+{
+    "go.toolsManagement.checkForUpdates": "local",
+    "go.useLanguageServer": true,
+    "go.formatTool": "goimports",
+    "go.lintTool": "golangci-lint",
+    "go.lintOnSave": "package",
+    "go.vetOnSave": "package",
+    "go.buildOnSave": "package",
+    "go.testOnSave": false,
+    "go.coverOnSave": false,
+    "go.coverageDecorator": {
+        "type": "gutter",
+        "coveredHighlightColor": "rgba(64,128,64,0.5)",
+        "uncoveredHighlightColor": "rgba(128,64,64,0.25)"
+    },
+    "go.testFlags": ["-v", "-race"],
+    "go.buildTags": "integration",
+    "go.testTimeout": "30s",
+    "go.addTags": {
+        "tags": "json,yaml,validate",
+        "options": "json=omitempty,yaml=omitempty",
+        "promptForTags": false,
+        "transform": "camelcase"
+    },
+    "files.exclude": {
+        "**/bin": true,
+        "**/vendor": true,
+        "**/.git": true,
+        "**/node_modules": true,
+        "**/tmp": true
+    },
+    "go.alternateTools": {
+        "go": "go",
+        "gofmt": "goimports",
+        "golint": "golangci-lint"
+    },
+    "go.autocompleteUnimportedPackages": true,
+    "go.gocodePackageLookupMode": "go",
+    "go.inferGopath": false,
+    "go.gopath": "",
+    "go.goroot": "",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": "explicit"
+    },
+    "[go]": {
+        "editor.formatOnSave": true,
+        "editor.insertSpaces": false,
+        "editor.tabSize": 4
+    },
+    "[go.mod]": {
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": "explicit"
+        }
+    }
+}

@@ -1,0 +1,65 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Launch apartment-hunt",
+            "type": "go",
+            "request": "launch",
+            "mode": "auto",
+            "program": "${workspaceFolder}/cmd/apartment-hunt",
+            "args": ["search"],
+            "env": {
+                "APARTMENT_HUNT_DATA_DIR": "${workspaceFolder}/data",
+                "APARTMENT_HUNT_LOG_LEVEL": "debug"
+            },
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "name": "Launch apartment-hunt with refresh",
+            "type": "go",
+            "request": "launch",
+            "mode": "auto",
+            "program": "${workspaceFolder}/cmd/apartment-hunt",
+            "args": ["search", "--refresh"],
+            "env": {
+                "APARTMENT_HUNT_DATA_DIR": "${workspaceFolder}/data",
+                "APARTMENT_HUNT_LOG_LEVEL": "debug"
+            },
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "name": "Debug current test",
+            "type": "go",
+            "request": "launch",
+            "mode": "test",
+            "program": "${workspaceFolder}",
+            "args": [
+                "-test.run",
+                "^TestName$"
+            ],
+            "env": {
+                "APARTMENT_HUNT_DATA_DIR": "${workspaceFolder}/test/data"
+            },
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "name": "Debug current file",
+            "type": "go",
+            "request": "launch",
+            "mode": "debug",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "name": "Attach to Process",
+            "type": "go",
+            "request": "attach",
+            "mode": "local",
+            "processId": 0
+        }
+    ]
+}
