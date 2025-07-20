@@ -1,0 +1,2 @@
+# Purpose
+This project has the dual purpose of exploring the capabilities of Claude Code as a development tool and to help me find a new apartment. Apartment searches are complex and tedious exercises composed mainly of data categorization and comparison, which seems like a good fit for AI assistance.
